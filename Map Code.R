@@ -1,3 +1,5 @@
+#Author: Francesca Corvaglia
+
 library(shiny)
 library(leaflet)
 library(RColorBrewer)
@@ -6,7 +8,7 @@ library(geojsonio)
 #rm(list = ls())
 options(stringsAsFactors = FALSE)
 
-setwd("/Users/FCORVAGL/Desktop/Data/Map")
+setwd(xxx")
 D15m <- read.csv("D15m.csv")
 #D15m <- read.csv("D15AVGm.csv")
 #names(D15m)[6] <- "AVG Public Transport/Walking"
