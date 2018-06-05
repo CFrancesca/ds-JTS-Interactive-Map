@@ -6,14 +6,14 @@ library(geojsonio)
 #rm(list = ls())
 options(stringsAsFactors = FALSE)
 
-setwd("G:/AFP/RLTDAll/STS/001 ACCESSIBILITY/001 DATA COLLECTION/0001 Accessibility Statistics/2016/data/R ShinyMap")
+setwd("xxx/R ShinyMap")
 D16m <- read.csv("D16m.csv")
 #D15m <- read.csv("D15m.csv")
 #D15m <- read.csv("D15AVGm.csv")
 #names(D15m)[6] <- "AVG Public Transport/Walking"
 #names(D15m)[7] <- "AVG Cycle"
 #names(D15m)[8] <- "AVG Car"
-UKMapG <- geojsonio::geojson_read("G:/AFP/RLTDAll/STS/001 ACCESSIBILITY/001 DATA COLLECTION/0001 Accessibility Statistics/2016/data/R ShinyMap/Lower_Layer_Super_Output_Areas_December_2011_Generalised_Clipped__Boundaries_in_England_and_Wales2.json", what = "sp")
+UKMapG <- geojsonio::geojson_read("xxx/R ShinyMap/Lower_Layer_Super_Output_Areas_December_2011_Generalised_Clipped__Boundaries_in_England_and_Wales2.json", what = "sp")
 UKMap <- UKMapG
 UKMap@data <- merge(UKMap@data, D16m, by.x = "lsoa11cd" , by.y = "LSOA_code", all.x  = TRUE)
 #UKMap@data <- merge(UKMap@data, D15m, by.x = "lsoa11cd" , by.y = "LSOA_code", all.x  = TRUE)
